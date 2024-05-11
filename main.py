@@ -4,7 +4,7 @@ def main():
     nb_words = count_words(text)
     print(f"There is {nb_words} dans {book}")
     list_letters = count_letters(text)
-    print(list_letters)
+    print(list_chars)
 
 def count_words(text):
     count = len(text.split())
@@ -15,15 +15,15 @@ def get_book_text(path):
         file_contents = f.read()
         return file_contents
 
-def count_letters(text):
-    count_letter = {};
+def count_char(text):
+    count_char = {};
     text_lower = text.lower()
-    for letter in text_lower:
-        if letter in count_letter:
-            count_letter[letter] += 1
+    for char in text_lower:
+        if char in count_char:
+            count_char[char] += 1
         else:
-            count_letter[letter] = 1
-    return count_letter
+            count_char[char] = 1
+    return count_char
     
 
 main()
