@@ -2,8 +2,8 @@ def main():
     book = "books/frankenstein.txt"
     text = get_book_text(book)
     nb_words = count_words(text)
-    print(f"There is {nb_words} dans {book}")
-    list_letters = count_letters(text)
+    print(f"There are {nb_words} dans {book}")
+    list_chars = count_char(text)
     print(list_chars)
 
 def count_words(text):
